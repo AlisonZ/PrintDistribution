@@ -18,12 +18,12 @@ public class Main {
         }
         return maxNum;
     }
-    
 
 
     public static void main(String[] args) {
         int arrayMax = getArrayMax();
         int xAxisNumberOfMarkers = arrayMax/10000 + 1;
+        System.out.print("    ");
         for(int i = 0; i < xAxisNumberOfMarkers + 1; i++) {
             if ( i == 0 ) {
                 System.out.printf(i * 10000 + "        ");
@@ -33,12 +33,13 @@ public class Main {
         }
         System.out.println();
 
-
+        System.out.print("    ");
         for(int i = 0; i < xAxisNumberOfMarkers + 1; i++) {
             System.out.printf("|        ");
         }
         System.out.println();
 
+        System.out.print("    ");
         for(int i = 0; i < xAxisNumberOfMarkers; i++) {
             System.out.printf("----------");
         }
