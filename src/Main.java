@@ -4,7 +4,7 @@ public class Main {
             24995,18217,12794,8623,5577,3601,2272,1259,764,464,246,
             153,80,39,22,12,6,3,0};
 
-    public static String yAxisCounter = "  | ";
+    public static String yAxisCounter = "| ";
     public static int starNumber(int count) {
         return count/1000;
     }
@@ -18,6 +18,7 @@ public class Main {
         }
         return maxNum;
     }
+    
 
 
     public static void main(String[] args) {
@@ -47,15 +48,15 @@ public class Main {
         for ( int i = 0; i < distribution.length; i++)
             if( i % 10 == 0 ) {
                 if (i == 0) {
-                    System.out.printf( i + " " + yAxisCounter);
+                    System.out.printf( i + "   " + yAxisCounter);
                     System.out.println( "*" +  "*".repeat(starNumber(distribution[i])));
                 } else {
-                    System.out.printf(i + yAxisCounter);
+                    System.out.printf( i + "  " + yAxisCounter);
                     System.out.println( "*" +  "*".repeat(starNumber(distribution[i])));
                 }
 
             } else {
-                System.out.printf("  " + yAxisCounter);
+                System.out.printf("    " + yAxisCounter);
                 System.out.println( "*" +  "*".repeat(starNumber(distribution[i])));
             }
     }
