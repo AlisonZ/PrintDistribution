@@ -18,30 +18,29 @@ public class Main {
         }
         return maxNum;
     }
-
-
+    
     public static void main(String[] args) {
         int arrayMax = getArrayMax();
         int xAxisNumberOfMarkers = arrayMax/10000 + 1;
-        System.out.print("    ");
+        System.out.print(" ".repeat(4));
         for(int i = 0; i < xAxisNumberOfMarkers + 1; i++) {
             if ( i == 0 ) {
-                System.out.printf(i * 10000 + "        ");
+                System.out.printf(i * 10000 + " ".repeat(8));
             } else {
-                System.out.printf(i * 10000 + "    ");
+                System.out.printf(i * 10000 + " ".repeat(4));
             }
         }
         System.out.println();
 
-        System.out.print("    ");
+        System.out.print(" ".repeat(4));
         for(int i = 0; i < xAxisNumberOfMarkers + 1; i++) {
-            System.out.printf("|        ");
+            System.out.printf("|" + " ".repeat(8));
         }
         System.out.println();
 
-        System.out.print("    ");
+        System.out.print(" ".repeat(4));
         for(int i = 0; i < xAxisNumberOfMarkers; i++) {
-            System.out.printf("----------");
+            System.out.printf("-".repeat(10));
         }
         System.out.println();
 
@@ -49,7 +48,7 @@ public class Main {
         for ( int i = 0; i < distribution.length; i++)
             if( i % 10 == 0 ) {
                 if (i == 0) {
-                    System.out.printf( i + "   " + yAxisCounter);
+                    System.out.printf( i + " ".repeat(3) + yAxisCounter);
                     System.out.println( "*" +  "*".repeat(starNumber(distribution[i])));
                 } else {
                     System.out.printf( i + "  " + yAxisCounter);
@@ -57,7 +56,7 @@ public class Main {
                 }
 
             } else {
-                System.out.printf("    " + yAxisCounter);
+                System.out.printf(" ".repeat(4) + yAxisCounter);
                 System.out.println( "*" +  "*".repeat(starNumber(distribution[i])));
             }
     }
